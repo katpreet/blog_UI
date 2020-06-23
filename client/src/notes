@@ -1,0 +1,16 @@
+
+We can convert each component to a class component.
+As of now i have made them function components because i am handling data through the redux store.
+
+To access data of the store from function component , we use props.users.name
+To access data of the store from class component, we use this.props.users.name
+
+All the data is getting loaded into the store from index page (i.e the very first time the app starts)
+When this data gets loaded on startup ...the redux store gets populated
+
+If any specific data is required related to one user or one post, we use MapstatetoProps.
+In this we "filter" in case we need multiple records. Here we get the array of objects that match the 
+condition and we cannot use it directly. this data has to be iterated and used using maps as:
+this.props.users.map......
+and we "find" in case we need single record. (here we get the object) and we can use the data directly As
+{this.user.name}
